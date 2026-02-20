@@ -1,2 +1,2 @@
-# paso-accionable
+# Paso-accionable
 Dinámica 3
