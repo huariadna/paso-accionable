@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Ruta: Mi Plan Estratégico Personal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .brujula-shape {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+
+        .card-plan {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card-plan:hover {
+            transform: translateY(-4px);
+        }
+
+        .commitment-border {
+            border: 2px dashed #cbd5e1;
+        }
+
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+            .card-plan { border: 1px solid #e2e8f0; box-shadow: none !important; }
+            .commitment-section { border: 2px solid #334155 !important; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border border-slate-200">
+        <!-- Header -->
+        <header class="bg-slate-900 text-white p-8 text-center relative">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2 uppercase">Hoja de Ruta</h1>
+            <p class="text-slate-400 text-lg">Mi Plan Estratégico Personal</p>
+            
+            <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+                <div class="flex items-center gap-2">
+                    <span class="text-slate-500 uppercase font-semibold">Nombre:</span>
+                    <input type="text" placeholder="Tu nombre aquí" class="bg-transparent border-b border-slate-700 focus:border-blue-500 outline-none px-2 py-1 w-48 transition-colors">
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-slate-500 uppercase font-semibold">Fecha:</span>
+                    <input type="date" class="bg-transparent border-b border-slate-700 focus:border-blue-500 outline-none px-2 py-1 transition-colors">
+                </div>
+            </div>
+        </header>
+
+        <div class="p-6 md:p-10 space-y-12">
+            <!-- Instrucciones -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <p class="text-blue-800 text-sm italic">
+                    <strong>Instrucciones:</strong> Tienes 25 minutos para completar esta hoja de ruta. No busques la perfección, busca la claridad. Lo más importante es que el "Primer Paso" sea tan pequeño y concreto que puedas hacerlo en las próximas dos semanas.
+                </p>
+            </div>
+
+            <!-- Sección 1: La Brújula -->
+            <section class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mb-4">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">1</span>
+                        MI BRÚJULA
+                    </h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Anota los <strong>3 valores clave</strong> que guiarán tus decisiones, pase lo que pase con tus planes. Estos son tu norte innegociable.
+                    </p>
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Valor 1 (Ej. Integridad)" class="w-full p-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        <input type="text" placeholder="Valor 2 (Ej. Creatividad)" class="w-full p-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        <input type="text" placeholder="Valor 3 (Ej. Seguridad)" class="w-full p-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                    </div>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="relative w-64 h-80 brujula-shape shadow-2xl flex flex-col items-center justify-center p-6 text-white text-center">
+                        <div class="absolute top-4 text-2xl">▲</div>
+                        <div class="font-bold text-xl mb-4 tracking-widest">NORTE</div>
+                        <div class="space-y-2 opacity-90 italic text-sm">
+                            <p>Tus valores son el</p>
+                            <p>fundamento de tu</p>
+                            <p>estrategia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-slate-100">
+
+            <!-- Sección 2: Escenarios -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-3 mb-8">
+                    <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">2</span>
+                    MIS ESCENARIOS
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Plan A -->
+                    <div class="card-plan bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden flex flex-col">
+                        <div class="bg-emerald-600 p-4 text-white">
+                            <h3 class="font-bold uppercase tracking-wider">Plan A: El Sueño</h3>
+                            <p class="text-xs opacity-80">El Escenario Ideal</p>
+                        </div>
+                        <div class="p-5 space-y-4 flex-grow">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Resumen:</label>
+                                <textarea placeholder="¿Cuál es el mejor resultado posible?" class="w-full p-2 text-sm border rounded-md h-24 focus:ring-1 focus:ring-emerald-500 outline-none"></textarea>
+                            </div>
+                            <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100">
+                                <label class="block text-xs font-bold text-emerald-700 uppercase mb-1">Primer Paso (2 semanas):</label>
+                                <textarea placeholder="Ej. Enviar correo a..." class="w-full bg-transparent text-sm text-emerald-900 placeholder-emerald-300 outline-none h-16 resize-none font-medium"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan B -->
+                    <div class="card-plan bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden flex flex-col">
+                        <div class="bg-blue-600 p-4 text-white">
+                            <h3 class="font-bold uppercase tracking-wider">Plan B: El Puente</h3>
+                            <p class="text-xs opacity-80">El Escenario Alternativo</p>
+                        </div>
+                        <div class="p-5 space-y-4 flex-grow">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Resumen:</label>
+                                <textarea placeholder="¿Cuál es otra buena opción para moverte?" class="w-full p-2 text-sm border rounded-md h-24 focus:ring-1 focus:ring-blue-500 outline-none"></textarea>
+                            </div>
+                            <div class="bg-blue-50 p-3 rounded-lg border border-blue-100">
+                                <label class="block text-xs font-bold text-blue-700 uppercase mb-1">Primer Paso (2 semanas):</label>
+                                <textarea placeholder="Ej. Actualizar LinkedIn..." class="w-full bg-transparent text-sm text-blue-900 placeholder-blue-300 outline-none h-16 resize-none font-medium"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan Z -->
+                    <div class="card-plan bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden flex flex-col">
+                        <div class="bg-rose-600 p-4 text-white">
+                            <h3 class="font-bold uppercase tracking-wider">Plan Z: El Paracaídas</h3>
+                            <p class="text-xs opacity-80">Escenario de Protección</p>
+                        </div>
+                        <div class="p-5 space-y-4 flex-grow">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Resumen:</label>
+                                <textarea placeholder="Si todo falla, ¿cómo te proteges?" class="w-full p-2 text-sm border rounded-md h-24 focus:ring-1 focus:ring-rose-500 outline-none"></textarea>
+                            </div>
+                            <div class="bg-rose-50 p-3 rounded-lg border border-rose-100">
+                                <label class="block text-xs font-bold text-rose-700 uppercase mb-1">Primer Paso (2 semanas):</label>
+                                <textarea placeholder="Ej. Revisar presupuesto..." class="w-full bg-transparent text-sm text-rose-900 placeholder-rose-300 outline-none h-16 resize-none font-medium"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 3: Compromiso Público -->
+            <section class="commitment-section bg-slate-900 text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                <!-- Decoración -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 opacity-10 rounded-full -mr-16 -mt-16"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-2xl font-bold flex items-center gap-3 mb-2">
+                        <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">3</span>
+                        MI COMPROMISO PÚBLICO
+                    </h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Define el paso más importante que compartirás con el grupo. Debe ser realizable en los próximos 14 días.
+                    </p>
+                    
+                    <div class="commitment-border rounded-xl p-6 bg-slate-800/50">
+                        <label class="block text-blue-400 text-xs font-bold uppercase mb-3 tracking-widest text-center">En las próximas dos semanas, yo voy a:</label>
+                        <textarea placeholder="Escribe aquí tu acción concreta (Ej. 'Llamar a...')" 
+                            class="w-full bg-transparent text-xl md:text-2xl text-center font-semibold text-white placeholder-slate-600 outline-none resize-none h-24 border-b border-slate-700 focus:border-blue-500 transition-colors"></textarea>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer / Acciones -->
+        <footer class="bg-slate-50 border-t border-slate-200 p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex gap-4 no-print ml-auto">
+                <button onclick="window.print()" class="bg-slate-800 hover:bg-slate-900 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                    </svg>
+                    Imprimir / PDF
+                </button>
+                <button onclick="clearForm()" class="text-slate-500 hover:text-rose-600 px-4 py-2 font-medium transition-colors">
+                    Limpiar Todo
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function clearForm() {
+            if (confirm('¿Estás seguro de que quieres borrar toda la información?')) {
+                document.querySelectorAll('input, textarea').forEach(el => el.value = '');
+            }
+        }
+    </script>
+</body>
+</html>
